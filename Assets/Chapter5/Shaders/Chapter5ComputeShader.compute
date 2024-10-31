@@ -1,0 +1,12 @@
+#pragma kernel CSMain
+
+StructuredBuffer<int> inputData;
+RWStructuredBuffer<int> outputData;
+
+// 20スレッド確保
+[numthreads(20,1,1)]
+void CSMain (uint3 id : SV_DispatchThreadID)
+{
+    //スレッドIDを配列のインデックスとして利用
+    outputData[id.x] = 2 * inputData[id.x];
+}
