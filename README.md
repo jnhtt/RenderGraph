@@ -24,3 +24,4 @@
 | ------------- | ------------- |
 | Universal RP/URP RenderGraph Samples | import PacakgeManager > Universal RP > Samples > URP RenderGraph Samples  |
 | URPRendererFeatureExample6  | https://github.com/robin-boucher/URPRendererFeatureExample6/tree/master/Assets/Samples/  |
+| 上級クリエイター向け URP 入門（Unity 6 版）  | https://unity.com/ja/resources/introduction-to-urp-advanced-creators-unity-6 |
