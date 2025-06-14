@@ -14,10 +14,14 @@ public class OutlineObjectId : MonoBehaviour
 
     public static Color IDToColor(int id)
     {
-        uint r = (uint)((id & 0x000000FF) >> 0);
-        uint g = (uint)((id & 0x0000FF00) >> 8);
-        uint b = (uint)((id & 0x00FF0000) >> 16);
-        return new Color(r / 255f, g / 255f, b / 255f, 1);
+        // 低ビットの類似性を避けるための分散
+        uint hash = (uint)(id * 2654435761);
+
+        byte r = (byte)((hash >> 0) & 0xFF);
+        byte g = (byte)((hash >> 8) & 0xFF);
+        byte b = (byte)((hash >> 16) & 0xFF);
+
+        return new Color32(r, g, b, 255);
     }
 
     private void OnValidate()
