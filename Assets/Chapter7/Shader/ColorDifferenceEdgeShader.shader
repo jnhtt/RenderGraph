@@ -16,7 +16,7 @@ Shader "Custom/FullScreen/ColorDifferenceEdge"
             // float4 invert = 1 - c;
             // return invert;
 
-            float scale = 1.4;
+            float scale = 2.3;
 
             float3 center = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_PointClamp, input.texcoord).rgb;
             float3 left   = SAMPLE_TEXTURE2D_X(_BlitTexture, sampler_PointClamp, input.texcoord + float2(-scale * _TexelSize.x, 0)).rgb;//tex2D(_IdTex, i.uv + float2(-_PixelSize.x, 0)).rgb;
@@ -29,7 +29,7 @@ Shader "Custom/FullScreen/ColorDifferenceEdge"
                  step(0.1, distance(center, up)) +
                  step(0.1, distance(center, down));
 
-            return diff > 0 ? float4(1, 1, 1, 1) : float4(0, 0, 0, 0);
+            return diff > 0 ? float4(center, 1) : float4(0, 0, 0, 0);
         }
     ENDHLSL
 

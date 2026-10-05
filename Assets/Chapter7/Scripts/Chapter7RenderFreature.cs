@@ -13,7 +13,7 @@ public class Chapter7RenderFreature : ScriptableRendererFeature
 {
     public class Chapter3RenderPass : ScriptableRenderPass
     {
-        private const string PASS_NAME = "Chapter3RenderPass";
+        private const string PASS_NAME = "Chapter7RenderPass";
 
         //リソースハンドルと参照を保持するためのクラス
         //必須:RenderGraphBuilder.SetRenderFuncで使う

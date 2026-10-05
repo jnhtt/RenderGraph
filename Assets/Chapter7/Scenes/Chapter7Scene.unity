@@ -513,7 +513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b903027f375904402bbf283549eeb4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectId: 300
+  objectId: 1
   render: {fileID: 472016263}
 --- !u!1 &600884025
 GameObject:
@@ -809,7 +809,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b903027f375904402bbf283549eeb4a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  objectId: 1000
+  objectId: 2
   render: {fileID: 912343083}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
